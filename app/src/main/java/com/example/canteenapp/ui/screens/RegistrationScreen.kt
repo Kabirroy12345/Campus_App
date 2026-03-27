@@ -1,6 +1,15 @@
 package com.example.canteenapp.ui.screens
 
-import androidx.compose.foundation.background
+/* 
+ * ==============================================================================
+ * AUTHENTICATION SCREENS
+ * ==============================================================================
+ * Role in Project: RegistrationScreen acts as the initial onboarding for students.
+ * Notice the fluid gradient backgrounds and OutlinedTextField components. 
+ * While the backend authentication isn't implemented for this demo, the UI
+ * is wired completely with state variables (email, password) that validate text.
+ * ==============================================================================
+ */import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions

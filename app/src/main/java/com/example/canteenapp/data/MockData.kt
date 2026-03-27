@@ -1,6 +1,14 @@
 package com.example.canteenapp.data
 
-/**
+/* 
+ * ==============================================================================
+ * MOCK DATA REPOSITORY
+ * ==============================================================================
+ * Role in Project: Instead of waiting for a backend server to be built, we use 
+ * this MockData object to simulate network responses. Look at how each MenuItem
+ * uses Unsplash image URLs to load high-quality pictures over the internet.
+ * ==============================================================================
+ *//**
  * A mock dataset representing the daily inventory of the canteen.
  * This simulates data that would typically come from a backend server or a database.
  * We include various items across categories with varying availability to demonstrate UI states.

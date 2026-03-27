@@ -1,6 +1,14 @@
 package com.example.canteenapp.data
 
-import androidx.compose.runtime.Immutable
+/* 
+ * ==============================================================================
+ * DATA CLASSES (MODELS)
+ * ==============================================================================
+ * Role in Project: These are "Data Blueprints." They dictate exactly what fields
+ * make up a 'MenuItem'. Using @Immutable allows Jetpack Compose to skip rendering
+ * calculations if the object hasn't changed, making the UI blazing fast.
+ * ==============================================================================
+ */import androidx.compose.runtime.Immutable
 
 /**
  * Represents a category of food items available in the canteen.

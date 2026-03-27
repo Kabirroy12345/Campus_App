@@ -1,6 +1,17 @@
 package com.example.canteenapp.notifications
 
-import android.app.NotificationChannel
+/* 
+ * ==============================================================================
+ * BROADCAST RECEIVER (BACKGROUND NOTIFICATIONS)
+ * ==============================================================================
+ * Role in Project: This component lives in the Android OS Background. When the
+ * AlarmManager (from RemindersScreen) reaches its specified time, it shouts out
+ * an "Intent". This Receiver is listening for that shout.
+ * 
+ * Once it hears it, it wakes up the app, constructs an Android Notification Channel
+ * (required for newer Android versions), and fires the push notification!
+ * ==============================================================================
+ */import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.BroadcastReceiver
 import android.content.Context

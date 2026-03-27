@@ -1,6 +1,17 @@
 package com.example.canteenapp.ui.screens
 
-import androidx.compose.foundation.background
+/* 
+ * ==============================================================================
+ * MENU DASHBOARD (THE PRIMARY UI)
+ * ==============================================================================
+ * Role in Project: This screen represents the "Dashboard" of the application. 
+ * Students browse food categories, scroll through items, and hit Add.
+ * 
+ * Compose Magic: Look at `val uiState by viewModel.uiState.collectAsState()`.
+ * This one line connects our UI Directly to the brain (CanteenViewModel). Next time
+ * the StateFlow updates, Compose recalculates and redraws only what changed!
+ * ==============================================================================
+ */import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow

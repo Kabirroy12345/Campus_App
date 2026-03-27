@@ -1,6 +1,16 @@
 package com.example.canteenapp.ui.screens
 
-import androidx.compose.foundation.background
+/* 
+ * ==============================================================================
+ * PROFILE SCREEN & ACCOUNT MGMT
+ * ==============================================================================
+ * Role in Project: A supplementary screen to cleanly show user profile details 
+ * and options like order history/settings. 
+ * Notice the 'onLogout' lambda function passed from MainActivity. When the logout 
+ * button is clicked, it clears the Navigation stack, securely dumping the user 
+ * back to the LoginScreen.
+ * ==============================================================================
+ */import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape

@@ -1,6 +1,18 @@
 package com.example.canteenapp
 
-import android.Manifest
+/* 
+ * ==============================================================================
+ * MAIN ACTIVITY & NAVIGATION (ENTRY POINT)
+ * ==============================================================================
+ * Role in Project: This file is the starting point of the entire Android Application.
+ * Think of it as the "Host" that holds all of our Screens (Composables).
+ * 
+ * Flow: 
+ * 1. OS Launches App -> MainActivity.onCreate() is triggered.
+ * 2. It sets the theme (`CanteenAppTheme`) and calls `CanteenAppNavigation()`.
+ * 3. The Navigation component decides which screen to show first (Login).
+ * ==============================================================================
+ */import android.Manifest
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -55,13 +67,20 @@ class MainActivity : ComponentActivity() {
 
 /**
  * Handles the routing for the application.
+ * Think of NavController as a "History Stack" that remembers where we came from.
  */
 @Composable
 fun CanteenAppNavigation() {
     val navController = rememberNavController()
-    // The ViewModel is scoped to the Navigation graph so state is shared between screens
+    
+    // IMPORTANT MVVM CONCEPT: 
+    // We instantiate the CanteenViewModel HERE at the root of the navigation graph.
+    // By passing this SAME 'sharedViewModel' down to MenuScreen and CartScreen,
+    // they both look at the exact same cart data. If MenuScreen adds an item, 
+    // CartScreen instantly sees it because they share this ViewModel!
     val sharedViewModel: CanteenViewModel = viewModel()
 
+    // NavHost dictates the mapping between a String route (e.g., "login") and the actual Screen UI.
     NavHost(navController = navController, startDestination = "login") {
         composable("login") {
             LoginScreen(

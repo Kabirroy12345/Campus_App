@@ -1,6 +1,17 @@
 package com.example.canteenapp.ui.screens
 
-import android.app.AlarmManager
+/* 
+ * ==============================================================================
+ * ALARMMANAGER & PERMISSIONS (REMINDERS UI)
+ * ==============================================================================
+ * Role in Project: This screen handles the heavy lifting of Android OS integrations.
+ * It manages exact alarm permissions (particularly critical for Android 14) and 
+ * calculates the precise epoch time to awaken the application for a push notification.
+ * 
+ * Note the 'Test Reminder Now' button: this generates an explicit Intent broadcast 
+ * so our professor can immediately verify the notification system works!
+ * ==============================================================================
+ */import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent

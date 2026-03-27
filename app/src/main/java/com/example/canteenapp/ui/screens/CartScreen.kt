@@ -1,6 +1,17 @@
 package com.example.canteenapp.ui.screens
 
-import android.widget.Toast
+/* 
+ * ==============================================================================
+ * CART SCREEN (CHECKOUT FLOW)
+ * ==============================================================================
+ * Role in Project: This screen iterates over the `cartItems` map stored in the 
+ * CanteenViewModel. It calculates the total price by cross-referencing cart IDs 
+ * with the original MenuItems dataset. 
+ *
+ * Notice the 'Place Order' button: it invokes `DatabaseHelper.insertOrder` to
+ * write stringified checkout details into SQLite, simulating a real order system!
+ * ==============================================================================
+ */import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*

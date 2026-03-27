@@ -1,6 +1,21 @@
 package com.example.canteenapp.viewmodel
 
-import androidx.lifecycle.ViewModel
+/* 
+ * ==============================================================================
+ * STATE MANAGEMENT & BUSINESS LOGIC (VIEWMODEL)
+ * ==============================================================================
+ * Role in Project: This file is the "Brain" of the Canteen App. It holds the
+ * single source of truth for our user interface. By keeping the UI State (like
+ * the cart's contents) separated from the UI Views (like MenuScreen), we ensure
+ * the app survives screen rotations and maintains data integrity.
+ * 
+ * Flow: 
+ * 1. UI receives a click (e.g., 'addToCart').
+ * 2. UI invokes ViewModel's addToCart() function.
+ * 3. ViewModel copies the current state, updates the cart map, and emits the new state.
+ * 4. Jetpack Compose observes this new state and re-renders the views instantly.
+ * ==============================================================================
+ */import androidx.lifecycle.ViewModel
 import com.example.canteenapp.data.Category
 import com.example.canteenapp.data.MenuItem
 import com.example.canteenapp.data.MockData
@@ -22,7 +37,8 @@ data class CanteenUiState(
 
 /**
  * CanteenViewModel manages the core business logic.
- * It holds the UiState inside a StateFlow and exposes functions to modify this state.
+ * IN MVVM Architecture, this is the 'ViewModel' tier.
+ * It strictly avoids importing any Android UI libraries.
  */
 class CanteenViewModel : ViewModel() {
 

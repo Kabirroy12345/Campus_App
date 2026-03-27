@@ -1,6 +1,18 @@
 package com.example.canteenapp.ui.components
 
-import androidx.compose.foundation.background
+/* 
+ * ==============================================================================
+ * REUSABLE UI COMPONENT (ITEM CARD)
+ * ==============================================================================
+ * Role in Project: Jetpack Compose thrives on "Composability" (breaking down UI 
+ * into small LEGO bricks). Instead of writing 150 lines of code for the Masala
+ * Dosa and another 150 for Biryani, we write ONE "ItemCard" and pass data to it.
+ * 
+ * Notice it is a stateless dummy. It requests information (item, quantity) and tells 
+ * the parent when buttons are clicked (onAddClick, onRemoveClick) rather than
+ * mutating the data itself. "State flows down, events flow up."
+ * ==============================================================================
+ */import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape

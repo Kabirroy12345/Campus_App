@@ -1,6 +1,16 @@
 package com.example.canteenapp.ui.screens
 
-import androidx.compose.foundation.background
+/* 
+ * ==============================================================================
+ * AUTHENTICATION SCREENS (LOGIN)
+ * ==============================================================================
+ * Role in Project: Similar to Registration, this is the visual gatekeeper.
+ * Using Jetpack Compose states (`mutableStateOf`), the fields remember what the 
+ * user types without needing old-fashioned 'findViewById' or TextWatchers.
+ * When they click "Login", the lambda function `onLoginSuccess` calls back
+ * to MainActivity to route them to the Menu.
+ * ==============================================================================
+ */import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions

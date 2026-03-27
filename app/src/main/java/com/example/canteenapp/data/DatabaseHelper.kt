@@ -1,6 +1,18 @@
 package com.example.canteenapp.data
 
-import android.content.ContentValues
+/* 
+ * ==============================================================================
+ * LOCAL DATABASE PERSISTENCE (SQLite)
+ * ==============================================================================
+ * Role in Project: This file acts as our local storage engine.
+ * Whenever a user places an order, it saves the stringified cart contents 
+ * and their delivery address straight into the device's internal storage
+ * so order history isn't lost on app restart.
+ * 
+ * Future Expansions: In a real-world scenario, this layer would talk to 
+ * a remote database (like Firebase or a Node JS backend).
+ * ==============================================================================
+ */import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
